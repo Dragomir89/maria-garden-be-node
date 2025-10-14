@@ -2,10 +2,10 @@
   "name": "maria-garden-be-node",
   "version": "1.0.0",
   "description": "\"# maria-garden-be-node\"",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "node app.js",
     "build": "echo 'Nothing to build for now'"
   },
   "author": "Dragomir",
