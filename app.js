@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api', (req, res) => {
-  res.status(200).send({ message: 'Hello World' });
+  res.status(200).send({ message: 'Hello World test commit' });
 });
 
 app.listen(port, () => {
