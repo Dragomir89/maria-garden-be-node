@@ -12,7 +12,7 @@ app.use(morgan('combined'));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.status(200).send({ message: `BE is up and running on --- ${port} ---` });
+  res.status(200).send({ message: `BE test test is up and running on --- ${port} ---` });
 });
 
 app.get('/api', (req, res) => {
