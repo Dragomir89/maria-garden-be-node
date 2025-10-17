@@ -6,16 +6,17 @@ phases:
       nodejs: 20
     commands:
       - echo "Installing dependencies..."
-      - npm install
-
+      - npm ci
   build:
     commands:
       - echo "Building project..."
       - npm run build
+  post_build:
+    commands:
+      - echo "Build completed."
 
 artifacts:
   files:
     - dist/**/*
     - package.json
     - package-lock.json
-    - Procfile
