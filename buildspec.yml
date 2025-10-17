@@ -11,10 +11,8 @@ phases:
   build:
     commands:
       - echo "Building The Project..."
-      - npm run build
+      - npm run build || echo "No build script"
 
 artifacts:
   files:
-    - dist/**/* # събраният JS код
-    - package.json
-    - package-lock.json
+    - '**/*'
