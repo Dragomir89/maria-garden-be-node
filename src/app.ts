@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-// import { creteUser, getUsers } from './db-mysql';
+import { creteUser, getUsers } from './db-mysql';
 
 dotenv.config();
 
@@ -12,13 +12,13 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', async (req: Request, res: Response) => {
-  // const users = await getUsers();
-  res.send('Hello World!');
+  const users = await getUsers();
+  res.send(users);
 });
 
 app.get('/create-user', async (req: Request, res: Response) => {
-  // const createdUser = await creteUser('Ivan', 'Ivanov', 33);
-  res.send('User created');
+  const createdUser = await creteUser('Ivan', 'Ivanov', 33);
+  res.send(createdUser);
 });
 
 app.listen(PORT, () => {
