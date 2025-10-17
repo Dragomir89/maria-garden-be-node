@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.get('/', async (req: Request, res: Response) => {
   const users = await getUsers();
-  res.send(users);
+  res.send('test on change');
 });
 
 app.get('/create-user', async (req: Request, res: Response) => {
