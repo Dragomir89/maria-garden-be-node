@@ -5,14 +5,17 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - echo "Installing Dependencies..."
+      - echo "Installing dependencies..."
       - npm install
 
   build:
     commands:
-      - echo "Building The Project..."
-      - npm run build || echo "No build script"
+      - echo "Building project..."
+      - npm run build
 
 artifacts:
   files:
-    - '**/*'
+    - dist/**/*
+    - package.json
+    - package-lock.json
+    - Procfile
